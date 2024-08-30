@@ -70,8 +70,8 @@ body {
 .popup-header {
   display: flex;
   justify-content: flex-start;
-  width: 10%;
-  margin-right: 3px; /* Remove any margin */
+  width: 5%;
+  margin-right: 0; /* Remove any margin */
   height: auto; /* Ensure height adjusts based on content */
   background-color: transparent; /* Make background transparent if not needed */
 }
@@ -198,22 +198,29 @@ h2 {
 
 .modal-content {
   display: flex;
-  flex-direction: row; /* Display items in a row */
-  align-items: flex-start; /* Align items to the start */
-  justify-content: space-between; /* Space between items */
+  flex-direction: row; /* Align items in a row */
+  align-items: flex-start; /* Align items to the start vertically */
+  justify-content: flex-start; /* Align items to the start horizontally */
   padding: 10px;
-  background-color: white;
-  border: 1px solid whitesmoke;
-  border-radius: 4px;
-  width: 100%;
+  background-color: white; /* or any background color */
+  border: 4px solid whitesmoke;
+  border-radius: 5px;
+  max-width: 95vw; /* Ensure container does not exceed viewport width */
+  max-height: 95vh; /* Ensure container does not exceed viewport height */
+  overflow: auto; /* Allow scrolling if content exceeds container size */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
+
 #popupImage {
-  max-width: 70%; /* Max width for image or media */
-  max-height: 95vh; /* Max height to fit in viewport */
-  background-color: white;
-  margin-right: 10px;
+  width: auto; /* Ensure the image width scales with the height */
+  height: auto; /* Maintain the aspect ratio */
+  max-width: 50%; /* Ensure the image doesn't exceed the container width */
+  max-height: 50%; /* Ensure the image doesn't exceed 90% of the viewport height */
+  display: block; /* Centers the image in block context */
+  margin: auto; /* Centers the image horizontally */
 }
+
 
 #popupMedia {
   max-width: 100%; /* Max width for image or media */
