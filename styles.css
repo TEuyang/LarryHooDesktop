@@ -1,187 +1,185 @@
 /* Basic CSS Reset and Body Styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Courier New", monospace;
-    font-size: medium;
-  }
-  
-  body {
-    background-color: skyblue;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    min-height: 100vh;
-    align-items: flex-start;
-    overflow: auto;
-    color: black;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+  font-size: medium;
+}
 
-  
-  
-  /* Common Popup Styling */
-  .popup,
-  .briefing_dialog,
-  .storypopup {
-    border-radius: 0;
-    border: 2px solid whitesmoke;
-    background-color:  white;
-    box-shadow: none;
-    overflow: hidden;
-  }
-  
-  .popup {
-    margin: 10px auto;
-    padding: 15px;
-    width: 60%;
-    max-width: 500px;
-    border-radius: 5px;
-    border: 3px solid whitesmoke;
-    background-color: white;
-  }
-  
-  .content {
-    box-shadow: none;
-    overflow: hidden;
-  }
-  
-  .page-one {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-  }
-  
-  /* Header Bar Styling */
-  .section-header-bar {
-    background-color: whitesmoke;
-    color: white;
-    padding: 5px;
-    font-weight: bold;
-    font-size: 14px;
-    border-bottom: 2px solid #000;
-    text-align: left;
-    font-family: "Courier New", Courier, monospace;
-  }
-  
-  .popup-header {
-    display: flex;
-    justify-content: flex-start;
-    width: 10%;
+body {
+  background-color: skyblue;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  min-height: 100vh;
+  align-items: flex-start;
+  overflow: auto;
+  color: black;
+}
+
+/* Common Popup Styling */
+.popup,
+.briefing_dialog,
+.storypopup {
+  border-radius: 0;
+  border: 2px solid whitesmoke;
+  background-color: white;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.popup {
+  margin: 10px auto;
+  padding: 15px;
+  width: 60%;
+  max-width: 500px;
+  border-radius: 5px;
+  border: 3px solid whitesmoke;
+  background-color: white;
+}
+
+.content {
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.page-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Header Bar Styling */
+.section-header-bar {
+  background-color: whitesmoke;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 2px solid #000;
+  text-align: left;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: flex-start;
+  width: 10%;
   margin-right: 3px; /* Remove any margin */
   height: auto; /* Ensure height adjusts based on content */
   background-color: transparent; /* Make background transparent if not needed */
-  }
-  
-  .popup-header span {
-    cursor: pointer;
-  }
-  
-  /* Button Styling */
-  a {
-    align-self: flex-end;
-  }
-  
-  button,
-  .continue-button,
-  .go-back-button,
-  .submit-button {
-    border: 2px solid white;
-    background-color: whitesmoke;
-    padding: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 3px;
-  }
-  button:hover,
-  .continue-button:hover,
-  .go-back-button:hover,
-  .submit-button:hover {
-    background-color: blue;
-    color: white;
-  }
-  
-  /* Category and Section Styling */
-  .category {
-    background-color: white;
-    margin-bottom: 20px;
-    border: 2px solid whitesmoke;
-    border-radius: 4px;
-  }
-  
-  .category-header {
-    border-bottom: 1px solid whitesmoke;
-    margin: 0;
-    padding: 5px;
-    background-color: whitesmoke;
-    font-size: medium;
-    font-weight: bold;
-  }
-  
-  /* Page Layout */
-  .sourcepage {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    margin: 10px auto;
-  }
-  
-  .content h2 {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: 0;
-    color: black;
-  }
-  
-  h2 {
-    margin-left: 10px;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    width: 100%;
-  }
-  
-  /* Thumbnail and Text Styling */
-  .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
-    font-size: smaller;
-    cursor: pointer;
-  }
-  
-  .item img {
-    max-width: 100px;
-    max-height: 80px;
-    object-fit: cover;
-    height: auto;
-    margin-bottom: 5px;
-  }
-  
-  .item p {
-    font-size: smaller;
-    margin: 3px;
-    margin-top: 5px;
-    word-wrap: break-word;
-    white-space: normal;
-    text-align: center;
-    max-width: 100%;
-  }
-  
-  /* Modal Styling */
+}
+
+.popup-header span {
+  cursor: pointer;
+}
+
+/* Button Styling */
+a {
+  align-self: flex-end;
+}
+
+button,
+.continue-button,
+.go-back-button,
+.submit-button {
+  border: 2px solid white;
+  background-color: whitesmoke;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+}
+button:hover,
+.continue-button:hover,
+.go-back-button:hover,
+.submit-button:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* Category and Section Styling */
+.category {
+  background-color: white;
+  margin-bottom: 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 4px;
+}
+
+.category-header {
+  border-bottom: 1px solid whitesmoke;
+  margin: 0;
+  padding: 5px;
+  background-color: whitesmoke;
+  font-size: medium;
+  font-weight: bold;
+}
+
+/* Page Layout */
+.sourcepage {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 10px auto;
+}
+
+.content h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 0;
+  color: black;
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* Thumbnail and Text Styling */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-size: smaller;
+  cursor: pointer;
+}
+
+.item img {
+  max-width: 100px;
+  max-height: 80px;
+  object-fit: cover;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.item p {
+  font-size: smaller;
+  margin: 3px;
+  margin-top: 5px;
+  word-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* Modal Styling */
 /* Modal Styling */
 .modal {
   display: none; /* Hide modal by default */
@@ -210,7 +208,7 @@
   width: 100%;
 }
 
-#popupImage{
+#popupImage {
   max-width: 70%; /* Max width for image or media */
   max-height: 95vh; /* Max height to fit in viewport */
   background-color: white;
@@ -236,54 +234,51 @@
   flex: 1;
   padding: 10px;
   max-width: 30%; /* Adjust width to fit next to media */
-
 }
 
-    .popup-navigation {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-  
-  .next-button-container {
-    padding: 10px;;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-  
-  .next-button-container button {
-    flex: 1;
-  }
-  
-  
-  /* Media query for smaller screens */
-  @media (max-width: 900px) {
-    .modal-content {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    #popupNotes,
-    .next-button-container {
-      max-width: 100%;
-      text-align: left;
-    }
+.popup-navigation {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
 
-    #popupinfo {
-      flex: 1;
-      padding: 10px;
-      max-width: 100%; /* Adjust width to fit next to media */
-    }
-  
-    #popupImage,
-    #popupMedia {
-      max-width: 100%;
-      max-height: auto;
-    }
+.next-button-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.next-button-container button {
+  flex: 1;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 900px) {
+  .modal-content {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
+  #popupNotes,
+  .next-button-container {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  #popupinfo {
+    flex: 1;
+    padding: 10px;
+    max-width: 100%; /* Adjust width to fit next to media */
+  }
+
+  #popupImage,
+  #popupMedia {
+    max-width: 100%;
+    max-height: auto;
+  }
+}
