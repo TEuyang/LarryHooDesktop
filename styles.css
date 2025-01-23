@@ -39,45 +39,18 @@ body {
   border-radius: 5px;
   border: 3px solid whitesmoke;
   background-color: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Drop shadow */
 }
 
-.content {
-  box-shadow: none;
-  overflow: hidden;
-}
-
-.page-one {
+.popup-body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align text to the left */
 }
 
-/* Header Bar Styling */
-.section-header-bar {
-  background-color: whitesmoke;
-  color: white;
-  padding: 5px;
-  font-weight: bold;
-  font-size: 14px;
-  border-bottom: 2px solid #000;
-  text-align: left;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.popup-header {
-  display: flex;
-  justify-content: flex-start;
-  width: 5%;
-  margin-right: 0; /* Remove any margin */
-  height: auto; /* Ensure height adjusts based on content */
-  background-color: transparent; /* Make background transparent if not needed */
-}
-
-.popup-header span {
-  cursor: pointer;
+.button-wrapper {
+  align-self: flex-end; /* Align the button to the right */
+  margin-top: 15px; /* Add spacing above the button */
 }
 
 /* Button Styling */
@@ -97,6 +70,7 @@ button,
   transition: background-color 0.3s ease;
   border-radius: 3px;
 }
+
 button:hover,
 .continue-button:hover,
 .go-back-button:hover,
@@ -111,6 +85,8 @@ button:hover,
   margin-bottom: 20px;
   border: 2px solid whitesmoke;
   border-radius: 4px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Drop shadow */
+
 }
 
 .category-header {
@@ -122,11 +98,22 @@ button:hover,
   font-weight: bold;
 }
 
+.page-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+  height: 100vh;
+  width: 100vw;
+  gap: 20px; /* Add spacing between the dialog boxes */
+  
+}
+
 /* Page Layout */
 .sourcepage {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 50%;
   margin: 10px auto;
 }
 
@@ -159,6 +146,7 @@ h2 {
   padding: 10px;
   font-size: smaller;
   cursor: pointer;
+  
 }
 
 .item img {
@@ -167,6 +155,8 @@ h2 {
   object-fit: cover;
   height: auto;
   margin-bottom: 5px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Drop shadow */
+
 }
 
 .item p {
@@ -179,7 +169,6 @@ h2 {
   max-width: 100%;
 }
 
-/* Modal Styling */
 /* Modal Styling */
 .modal {
   display: none; /* Hide modal by default */
@@ -195,6 +184,7 @@ h2 {
   background-color: transparent; /* Transparent background */
   border: none; /* No border */
   box-shadow: none; /* No shadow */
+  
 }
 
 .modal-content {
@@ -210,8 +200,9 @@ h2 {
   max-height: 95vh; /* Ensure container does not exceed viewport height */
   overflow: auto; /* Allow scrolling if content exceeds container size */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
-}
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Drop shadow */
 
+}
 
 #popupImage {
   width: auto; /* Ensure the image width scales with the height */
@@ -221,7 +212,6 @@ h2 {
   display: block; /* Centers the image in block context */
   margin: auto; /* Centers the image horizontally */
 }
-
 
 #popupMedia {
   max-width: 100%; /* Max width for image or media */
@@ -263,6 +253,17 @@ h2 {
 
 .next-button-container button {
   flex: 1;
+}
+
+.close {
+  cursor: pointer; /* Makes the 'X' clickable */
+  color: black; /* Default color */
+  font-size: 16px; /* Adjust font size if needed */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.close:hover {
+  color: blue; /* Change color when hovered */
 }
 
 /* Media query for smaller screens */
